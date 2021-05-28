@@ -1,0 +1,84 @@
+
+//
+//  Created by Darya Filipchyk on 3/5/21.
+//
+
+
+/* I.    Write a C++ program to display a hot beverage menu and prompts the user to make a selection. 
+A switch statement determines which item the user has chosen. 
+A do-while loop repeats until the user selects item X from the menu to exit, 
+any other selection should display the item selected and the price. The choices and prices are:
+     Coffee    $1.00
+     Tea            $ .75
+     Hot Chocolate $1.25
+     Cappuccino     $2.50
+     Latte $3.75
+*/
+
+
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+ 
+int main () {
+    char choice;
+    string choice1 = "Coffee: $1.00";
+    string choice2 = "Tea: $0.75";
+    string choice3 = "Hot Chocolate: $1.25";
+    string choice4 = "Cappuccino: $2.50";
+    string choice5 = "Latte: $3.75";
+    string choice6 = "To Exit.";
+    
+
+    do{ cout<<"Hot Beverage:"<<endl;
+        cout<<"1. "<<choice1<<endl;
+        cout<<"2. "<<choice2<<endl;
+        cout<<"3. "<<choice3<<endl;
+        cout<<"4. "<<choice4<<endl;
+        cout<<"5. "<<choice5<<endl;
+        cout<<"X. "<<choice6<<endl;
+        cout<<""<<endl;
+        cout<<"Please enter the number of your selection: "<<endl;
+        cin>>choice;
+        choice=tolower(choice);
+        cout<<""<<endl;
+        
+        switch(choice){
+            case '1':
+                cout<<"You selected "<<choice1<<endl;
+                cout<<""<<endl;
+                break;
+            case '2':
+                cout<<"You selected "<<choice2<<endl;
+                cout<<""<<endl;
+                break;
+            case '3':
+                cout<<"You selected "<<choice3<<endl;
+                cout<<""<<endl;
+                break;
+            case '4':
+                cout<<"You selected "<<choice4<<endl;
+                cout<<""<<endl;
+                break;
+            case '5':
+                cout<<"You selected "<<choice5<<endl;
+                cout<<""<<endl;
+                break;
+            default:
+                if(choice=='x')
+                    cout<<"You selected X "<<choice6<<" Good bye!"<<endl;
+                else
+                    cout<<"Invalid Entry. Try again."<<endl;
+                    cout<<""<<endl;
+               
+        }
+
+        
+    } while(choice!='x');
+    
+    
+
+ 
+   return 0;
+}
